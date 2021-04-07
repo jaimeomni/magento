@@ -1,0 +1,16 @@
+<?php
+
+/** @var \OmniPro\Blog\Block\Elements $block */
+$posts = $block->orderPostByDate();
+?>
+
+<div class="template">
+    <?php foreach ($posts as $post) : ?>
+       <div style="border: 3px solid #000000; border-radius: 15px">
+            <h3><?= $post->getTitle() ?></h3>
+            <h6><?= $post->getCreated_at() ?></h6>
+            <img src="https://picsum.photos/100" alt="Post">
+            <p><?= $post->getContent() ?></p>
+       </div>
+    <?php endforeach; ?>
+</div>

@@ -1,0 +1,55 @@
+<?php
+
+$errors = '';
+
+if (isset($_POST['save'])) {
+    $title = $_POST['title'];
+    $content = $_POST['content'];
+    $email = $_POST['email'];
+    $file = $_POST['image'];
+
+    if (!empty($title)) {
+        $title = trim(($title));
+
+    } else {
+        $errors .= 'No hay titulo <br />';
+    }
+
+    if (!empty($email)) {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errors .= 'Correo de invalido <br />';
+        }
+    } else {
+        $errors .= 'No hay correo <br />';
+    }
+
+    if (empty($_POST['image']) && empty($_POST['content'])) {
+        $errors .= 'No hay imagen o contenido <br />';
+    }
+    
+    
+    
+}
+
+/** @var \OmniPro\Blog\Block\Form $block */
+
+
+
+
+?>
+
+<div class="template">
+    <h4>New blog post</h4>
+    <form action="<?php echo $block->getFormAction() ?>" method="post">
+        <input type="text" name="title" placeholder="My post title">
+        <textarea type="text" name="content" placeholder="Post text"></textarea>
+        <input type="email" name="email" placeholder="Email Address">
+        <input type="file" id="myFile" name="image">
+        <?php if (!empty($errors)): ?>
+            <div class="error"><?php echo $errors ?></div>
+        <?php endif; ?>
+        <input type="submit" value="Save post" name="save">
+        
+    </form>
+</div>
+

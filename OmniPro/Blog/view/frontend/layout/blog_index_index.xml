@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="OmniPro\Blog\Block\Title" name="OmniPro_Blog_Title" template="OmniPro_Blog::title.phtml" />
+            <block class="OmniPro\Blog\Block\Form" name="OmniPro_Blog_Form" template="OmniPro_Blog::form.phtml" />
+            <block class="OmniPro\Blog\Block\Elements" name="OmniPro_Blog_Elements" template="OmniPro_Blog::elements.phtml" />
+        </referenceContainer>
+    </body>
+</page>
