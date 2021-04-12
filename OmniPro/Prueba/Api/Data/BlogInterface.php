@@ -77,4 +77,10 @@ interface BlogInterface {
      * @return string
      */
     public function getImg();
+
+    /**
+     * Returns of the created date of the post     
+     * @return void
+     */
+    public function getCreatedDateTime();
 }

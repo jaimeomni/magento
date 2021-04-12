@@ -9,6 +9,7 @@ class Blog extends \Magento\Framework\Model\AbstractModel implements \Magento\Fr
     const CONTENT = 'content';
     const IMG = 'img';
     const ID = 'id';
+    const CREATEDDATE = 'created_datetime';
 
     /**
      * Model cache tag for clear cache in after save and after delete
@@ -106,5 +107,9 @@ class Blog extends \Magento\Framework\Model\AbstractModel implements \Magento\Fr
         $this->setData(self::IMG, $img);
     }
 
+    public function getCreatedDateTime()
+    {
+        return $this->getData(self::CREATEDDATE);
+    }
 
 }
