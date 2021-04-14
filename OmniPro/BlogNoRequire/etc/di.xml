@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="OmniPro\BlogNoRequire\Api\Data\BlogInterface" type="OmniPro\BlogNoRequire\Model\Blog"/>
+    <preference for="OmniPro\BlogNoRequire\Api\BlogRepositoryInterface" type="OmniPro\BlogNoRequire\Model\BlogRepository"/>
+    <preference for="OmniPro\BlogNoRequire\Api\Data\BlogSearchResultInterface" type="OmniPro\BlogNoRequire\Model\BlogSearchResult"/>
+</config>

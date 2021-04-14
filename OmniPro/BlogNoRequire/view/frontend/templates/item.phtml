@@ -1,0 +1,19 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+$viewModel = $block->getViewModel();
+?>
+
+<div class="template" style="width: 70%;">
+    <h3>Posts</h3>
+    <?php foreach ($viewModel->getPosts() as $post) : ?>
+        <div style="margin-top: 5px;border: 1px solid #AFACAB; border-radius: 3px;">
+            <h4 style="margin-left: 5px;"><?= $post->getTitle() . ' - ' . $post->getCreatedDateTime() . ' - ' . $post->getEmail() ?></h4>
+            <?php if ($post->getImg() != null) { ?>
+                <img src="<?= 'https://app.prueba-magento.test/pub/media/' . $post->getImg() ?>" alt="image" style="margin-left: 5px; width: 10%; height: 10%;">
+            <?php } ?>
+            <?php if ($post->getContent() != null) { ?>
+                <p style="margin-left: 5px;"><?= $post->getContent() ?></p>
+            <?php } ?>
+        </div>
+    <?php endforeach; ?>
+</div>
