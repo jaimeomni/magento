@@ -1,7 +1,7 @@
 var config = {
     map: {
         '*': {
-            'prueba-magento':'OmniPro_Attributes/js/prueba'
+            'blogItems':'OmniPro_Attributes/js/blogItems'
             }
         }
     };

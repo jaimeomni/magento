@@ -7,6 +7,18 @@
                     <argument name="view_model" xsi:type="object">OmniPro\Attributes\ViewModel\AttributeViewModel</argument>
                 </arguments>
             </block>
+            <block name="omnipro_prueba_items" template="OmniPro_Attributes::itemsko.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="blogComponent" xsi:type="array">
+                                <item name="component" xsi:type="string">blogItems</item>
+                                <item name="template" xsi:type="string">OmniPro_Attributes/blog</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>
