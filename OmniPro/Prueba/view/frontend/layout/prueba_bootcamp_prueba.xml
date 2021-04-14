@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="OmniPro_Prueba::css/blog.css" />
+    </head>
     <body>
         <referenceContainer name="content">
             <block name="omnipro_prueba_titulo" template="OmniPro_Prueba::titulo.phtml" >
@@ -7,14 +10,26 @@
                     <argument name="view_model" xsi:type="object">OmniPro\Prueba\ViewModel\BlogViewModel</argument>
                 </arguments>
             </block>
-            <block name="omnipro_prueba_form" template="OmniPro_Prueba::form.phtml" >
+            <!-- <block name="omnipro_prueba_form" template="OmniPro_Prueba::form.phtml" >
                 <arguments>
                     <argument name="view_model" xsi:type="object">OmniPro\Prueba\ViewModel\BlogViewModel</argument>
                 </arguments>
-            </block>
-            <block name="omnipro_prueba_items" template="OmniPro_Prueba::item.phtml" >
+            </block> -->
+            <!-- <block name="omnipro_prueba_items" template="OmniPro_Prueba::item.phtml" >
                 <arguments>
                     <argument name="view_model" xsi:type="object">OmniPro\Prueba\ViewModel\BlogViewModel</argument>
+                </arguments>
+            </block> -->
+            <block name="omnipro_prueba_items" template="OmniPro_Attributes::itemsko.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="blogComponent" xsi:type="array">
+                                <item name="component" xsi:type="string">blogItems</item>
+                                <item name="template" xsi:type="string">OmniPro_Prueba/blog</item>
+                            </item>
+                        </item>
+                    </argument>
                 </arguments>
             </block>
         </referenceContainer>
