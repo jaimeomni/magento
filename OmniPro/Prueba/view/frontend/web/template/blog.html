@@ -1,6 +1,5 @@
 <h3>New blog post</h3>
-<form class="form" action="" method="post" data-bind="submit: sendBlog" data-hasrequired="* Required Fields"
-    data-mage-init='{"validation":{}}'>
+<form class="form" action="" method="post" data-bind="submit: sendBlog" data-hasrequired="* Required Fields">
     <fieldset class="fieldset">
         <div class="field name required">
             <label for="titulo" class="label"><span>Titulo</span></label>
@@ -26,13 +25,12 @@
         <div class="field name">
             <label for="img" class="label"><span>Img</span></label>
             <div class="control">
-                <input type="text" id="img" name="img" placeholder="img" data-bind="value: image" class="input-text">
+                <input type="file" id="img" name="img" placeholder="img" data-bind="value: image, event: {change: changeImage}" accept="image/png, image/jpeg" class="input-text">
             </div>
         </div>
     </fieldset>
     <div class="actions-toolbar">
         <div class="primary">
-            <input type="hidden" name="hideit" id="hideit" value="" />
             <button type="submit" title="Submit" class="action submit primary">
                 <span>Submit</span>
             </button>
